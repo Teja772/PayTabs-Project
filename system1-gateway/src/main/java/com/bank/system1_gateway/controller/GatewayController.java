@@ -23,8 +23,8 @@ public class GatewayController {
         }
 
         // 2. If valid, send to System 2 (The Vault)
-        String coreBankUrl = "http://localhost:8082/process";
-        
+// REPLACE WITH YOUR COPIED URL from Phase 2
+String coreBankUrl = "https://core-bank-system.onrender.com/process";        
         try {
             // This forwards the message to System 2 and waits for the answer
             return restTemplate.postForObject(coreBankUrl, request, String.class);
